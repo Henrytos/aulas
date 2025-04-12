@@ -98,9 +98,11 @@
         for (var contador = 0; contador <= chartTemperature.data.datasets[1].data.length; contador++) {
             var temperaturaAtual = chartTemperature.data.datasets[1].data[contador]
             console.log(temperaturaAtual)
+
             if (temperaturaAtual >= 6) {
                 alert("Temperatura elevada, perigo!!")
             }
+            
         }
 
     </script>
