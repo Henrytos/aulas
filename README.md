@@ -1,0 +1,1 @@
+olá chat quero sua ajuda , para testar meus conhecimentos em joins no sql , quero que fassa um questionario de1 pergunta de multipl escolha sobre join , left join ,right join , e ao final que eu reesponder você me avalia de 0 a 10 , não quero resposta no final , quero minha avaliação só depois de enviar as resposta do questionario , queros que seja curto o enunciado e perguntas
