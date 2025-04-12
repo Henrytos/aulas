@@ -1,13 +1,6 @@
-const mysql = require("mysql2")
+const mysql = require("mysql2/promise.js")
 
-const connection =
-    mysql.createConnection({
-        host: '127.0.0.1',
-        user: 'henry',
-        password: 'sptech@2025',
-        database: 'pi',
-        port: 3306
-    })
+
 
 
 async function insertStudent(nome) {
@@ -27,6 +20,15 @@ async function updateStudent(id, nome) {
 async function getStudent(id) {
 
     try {
+
+        const connection =
+            await mysql.createConnection({
+                host: '127.0.0.1', // localhost
+                user: 'henry',
+                password: 'sptech@2025',
+                database: 'pi',
+                port: 3306
+            })
         const [results, fields] = await connection.execute(`SELECT * FROM aluno WHERE idAluno = ${id}`);
         console.log(results); // results contains rows returned by server
 
@@ -35,4 +37,4 @@ async function getStudent(id) {
     }
 }
 
-getStudent(1)
+getStudent(19)
