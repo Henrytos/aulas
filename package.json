@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@types/node": "^22.14.1",
+    "express": "^5.1.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.14.0",
+    "serialport": "^13.0.0",
+    "yt-get": "^1.1.2"
+  }
+}
