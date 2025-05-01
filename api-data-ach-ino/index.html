@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Gráfico</title>
+</head>
+
+<body>
+    <h1>Dashboards</h1>
+
+    <div style="width: 500px;">
+        <canvas id="canvas_chart_line">
+        </canvas>
+    </div>
+    <div style="width: 500px;">
+        <canvas id="canvas_chart_bar">
+        </canvas>
+    </div>
+
+    <script>
+       
+        console.log(chartTemperature.data.datasets[1].data)
+
+        for (var contador = 0; contador <= chartTemperature.data.datasets[1].data.length; contador++) {
+            var temperaturaAtual = chartTemperature.data.datasets[1].data[contador]
+            console.log(temperaturaAtual)
+
+            if (temperaturaAtual >= 6) {
+                alert("Temperatura elevada, perigo!!")
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
