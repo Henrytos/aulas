@@ -13,6 +13,7 @@ function executar(instrucao) {
     return new Promise(function (resolve, reject) {
         var conexao = mysql.createConnection(mySqlConfig);
         conexao.connect();
+
         conexao.query(instrucao, function (erro, resultados) {
             conexao.end();
             if (erro) {
@@ -21,6 +22,7 @@ function executar(instrucao) {
             console.log(resultados);
             resolve(resultados);
         });
+
         conexao.on('error', function (erro) {
             return ("ERRO NO MySQL SERVER: ", erro.sqlMessage);
         });

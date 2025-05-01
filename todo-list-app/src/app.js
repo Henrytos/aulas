@@ -10,7 +10,8 @@ const { getAllTasks, createTask } = require('./model/task.js')
 const app = express()
 app.use(cors({
     origin: '*'
-}))
+}))// policia do navegador
+
 app.use(express.static(path.join(__dirname, '../public')))
 app.use(express.json())
 app.get('/tasks', async (req, res) => {
