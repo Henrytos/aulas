@@ -1,0 +1,28 @@
+{
+  "name": "modify",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon --exec node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VRestini/modify-hc.git"
+  },
+  "author": "VRestini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VRestini/modify-hc/issues"
+  },
+  "homepage": "https://github.com/VRestini/modify-hc#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1",
+    "nodemon": "^3.1.10",
+    "path": "^0.12.7"
+  }
+}

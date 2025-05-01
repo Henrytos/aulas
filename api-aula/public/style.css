@@ -1,0 +1,105 @@
+@font-face{
+    font-family: 'gidole';
+    src: url(./assets/fonts/Gidole-Regular.ttf) format('truetype');
+}
+
+*{
+    color: #f0f0f0;
+    font-family: gidole;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+}
+
+
+
+.section-login, .section-register{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #4B0082 0%, #6A0DAD 30%, #9932CC 70%, #BA55D3 100%);
+}
+.section-register{
+    background: linear-gradient(45deg, #3e016a 0%, #601199 30%, #8931b5 70%, #9847ad 100%);
+}
+
+.container-box, .container-box-register{
+    background-color: #2A2A2A;
+    height: 400px;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.container-box-register{
+    height: 550px;
+}
+.container-form{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    gap: 20px;
+ 
+}
+.container-form h2{
+    align-self: center;
+}
+
+.input-form {
+    background-color: #E3E3E3;
+    border-radius: 10px;
+    border: transparent;
+    height: 40px;
+    width: 100%;
+    color: #2A2A2A;
+    border: 2px solid #2e2e2e;
+    font-size: 18px;
+    background-repeat: no-repeat;
+    background-position: 10px center; 
+    background-size: 25px;
+    box-sizing: border-box;
+    
+    /* Espaçamento interno (ajuste conforme necessário) */
+    padding-left: 45px;
+}
+.form-group label{
+    font-size: 18px;
+}
+.input-form:focus{
+    outline: none; 
+    border: 2px solid #9932CC; 
+    
+}
+.email{
+    background-image: url(./assets/img/Icon.png);
+}
+.password{
+    background-image: url(./assets/img/Lock.png);
+}
+span, a{
+    font-size: 20px;
+}
+.btn-primary{
+    background-color: #9932CC;
+    height: 40px;
+    width: 200px;
+    border-radius: 15px;
+    border: transparent;
+    transition: transform 0.2s;
+    align-self: center;
+    
+}
+.btn-primary:hover{
+    transform:scale(1.05);
+}
+#form-link-register{
+    margin-top: -2px;
+    align-self: center;
+}
