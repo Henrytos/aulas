@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="renderTasks()">
+    <h1>lista de tarefas</h1>
+    <input type="text" id="input_tarefa">
+    <button onclick="addTask()">adicionar</button>
+    <ul id="ul_tasks">
+
+    </ul>
+
+    <script>
+        function renderTasks() {
+            fetch('http://localhost:3333/tasks').then((response) => {
+                response.json().then((tasks) => {
+                    var message = ''
+
+                    for (let index = 0; index < tasks.length; index++) {
+                        let task = tasks[index]
+
+                        message += `<li id='${task.id}'>${task.name} - ${task.completed}</li>` // Assuming task has a 'name' property
+                    }
+
+                    ul_tasks.innerHTML = message
+                })
+
+            })
+        }
+        function addTask() {
+            var task = input_tarefa.value
+
+            fetch('http://localhost:3333/tasks', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ task: task })
+            }).then((response) => {
+                console.log(response)
+            }).catch((error) => {
+                console.log(error)
+            })
+        }
+    </script>
+</body>
+
+</html>
