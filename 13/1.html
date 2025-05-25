@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    1. PARTE 1
+
+    1. Caixa de Músicas
+     Crie um programa o qual:
+
+    a) O usuário informa os nomes das músicas que mais gosta e clica em "Cadastrar"; 
+
+    b) Ao clicar em "Exibir", as músicas vão aparecendo uma abaixo da outra, abaixo do botão. 
+
+    c) Tenha dois campos "De..." e "Até...", que recebem um intervalo de dois números crescentes.
+
+    d) Ao clicar em "Filtrar", deve exibir as músicas que estão dentro daquele intervalo.
+
+    OBS: se o usuário informar "de 1 até 5", deve mostrar da primeira música(0) até a quinta música da lista(4).
+    -->
+
+
+    <p>Nome da musica</p>
+    <input type="text" name="input_musica" id="input_musica">
+    <br>
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <p>inicio de musica(de)</p>
+    <input type="number" name="input_inicio" id="input_inicio">
+    <br>
+    <p>final de musica(até)</p>
+    <input type="number" name="input_ate" id="input_ate">
+    <button onclick="filtar()">Filtrar</button>
+
+
+    <button onclick="exibir()">Exibir</button>
+    <div id="div_mensagem"></div>
+
+
+
+    <script>
+
+        var musicas = []
+
+        function cadastrar() {
+            var musica = input_musica.value
+            musicas.push(musica)
+        }
+
+        function exibir() {
+            div_mensagem.innerHTML = ''
+            for (var i = 0; i < musicas.length; i++) {
+                div_mensagem.innerHTML += `(${i + 1})  -  ${musicas[i]} <br>`
+            }
+        }
+
+        function filtar() {
+            var inicio = Number(input_inicio.value) // 1
+            var final = Number(input_ate.value) //3
+
+
+            if (inicio >= final) {
+                alert("o numero inicial não pode ser maior ou igual que o final")
+            } else {
+                div_mensagem.innerHTML = ''
+
+                // 1 até 3 
+                for (var i = inicio - 1; i < final; i++) {
+                    div_mensagem.innerHTML += `(${i + 1})  -  ${musicas[i]} <br>`
+                }
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

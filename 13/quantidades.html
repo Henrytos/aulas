@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>votacao</title>
+</head>
+
+<body>
+
+
+    <p>nome do presidente</p>
+
+    <input type="text" name="input_nome" id="input_nome">
+
+    <button onclick="cadastrar()">Cadastrar</button>
+
+</body>
+
+</html>
+
+<script>
+    var lista = []
+    var votos = []
+
+    function cadastrar() {
+        var nome = input_nome.value
+        // includes -> true ou false (vetor.inclues(item))
+        // indexOf -> indice caso não exista retorna -1 (vetor.indexOf(item))
+        if (lista.includes(nome)) {
+            var posicao = lista.indexOf(nome) // procurando posicao do item na lista
+
+            votos[posicao] += 1 // adicionado um novo voto
+        } else {
+            lista.push(nome) // mesma posicao 
+            votos.push(1) // mesma posicao 
+        }
+    }
+
+
+</script>
